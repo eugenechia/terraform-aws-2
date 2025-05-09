@@ -67,8 +67,8 @@ resource "aws_security_group" "gene_sg" {
 }
 
 resource "aws_key_pair" "gene_auth" {
-  key_name   = "genekey"
-  public_key = file("~/.ssh/digitalocean.pub")
+  key_name   = "homelabkey"
+  public_key = file("~/.ssh/AWS_TF_gene.pub")
 }
 
 resource "aws_instance" "dev_node" {
